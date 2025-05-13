@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>QR-CODE GENERATOR</h1>
+    <div class="container">
+        <div class="code">
+        <form class="form">
+            <div class="form-group">
+                <label for="url">Enter Website Link : </label>
+                <input type="text" id="url" required>
+            </div>
+            <div class="form-group">
+                <label for="size">Enter size : </label>
+                <select  id="size" class="size-dropdown">
+                    <option value="100">100x100</option>
+                    <option value="200">200x200</option>
+                    <option value="300">300x300</option>
+                    <option value="400">400x400</option>
+                </select>
+            </div>
+            <div class="form-single-group">
+                <label for="colorDark">Color Dark</label>
+                <input type="color"  id="colorDark">
+            </div>
+            <div class="form-single-group">
+                <label for="colorLight" >Color Light</label>
+                <input type="color"  id="colorLight" value="#ffffff">
+            </div>
+            <button type="submit" class='btn' id="btn-generate">Generate QR</button>
+            <a href="#" type="button" class="btn" id="btn-save">Save Picture</a>
+        </form>
+    </div>
+    <div class="output">
+        <div id="qrcode"></div>
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
